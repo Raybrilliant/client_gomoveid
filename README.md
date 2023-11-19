@@ -35,7 +35,7 @@ Jalankan XAMPP dengan menekan tombol seperti gambar dibawah
 php artisan migrate
 ```
 Ketika ada pesan buat database baru ? pilih yes
-### Update Project
+### Generate Key Project
 ```
 php artisan key:generate
 ```
