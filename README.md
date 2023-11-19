@@ -5,7 +5,7 @@ Tutor nih bos.
 
 ### Clone Project
 ```
-git clone https://github.com/Raybrilliant/client_gomoveid.git
+git clone https://github.com/Raybrilliant/client_gomoveid.git .
 ```
 ### Update Project
 ```
