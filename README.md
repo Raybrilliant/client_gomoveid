@@ -1,66 +1,69 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# GOMOVE ID
 
-## About Laravel
+Tutor nih bos.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Clone Project
+```
+git clone https://github.com/Raybrilliant/client_gomoveid.git
+```
+### Update Project
+```
+composer update
+```
+### Ubah .env.example
+Hapus .example sehingga menjadi .env setelah itu ubah isi dari .env seperti berikut 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=gomoveid
+DB_USERNAME=root
+DB_PASSWORD=
+```
+Secara default password XAMPP adalah kosong namun jika kalian pernah mengganti password tersebut maka gunakan password yang baru.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Jalankan server XAMPP
+Jalankan XAMPP dengan menekan tombol seperti gambar dibawah 
 
-## Learning Laravel
+![](https://idcloudhost.com/wp-content/uploads/2020/03/Cara-Menggunakan-XAMPP-untuk-Menjalankan-PHP-MySQL-17.png)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Jalankan Migrate
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```
+php artisan migrate:fresh
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Jalankan Project
 
-## Laravel Sponsors
+```
+php artisan serve
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
+## !!! Attention !!!
+Sampai tahap sini aplikasi sudah bisa digunakan namun belum terdapat akun admin dikarenakan admin tidak bisa mendaftar melalui web maka diperlukan cara khusus untuk mendaftarkan admin. seperti langkah dibawah
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### Masuk ke PHPMyAdmin
+masuk kedalam PHPMyAdmin dengan menekan tombol admin pada MySQL
 
-## Contributing
+![](https://skillforge.com/wp-content/uploads/2018/12/xamppadminbtn.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Masuk ke menu SQL
+Masuk kedalam menu SQL seperti gambar berikut
 
-## Code of Conduct
+*Fokus pada warna merah dan kuning*
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+![](https://wpengine.com/wp-content/uploads/2018/02/database_phpmyadmin_run_query-1024x302.png)
 
-## Security Vulnerabilities
+Lalu masukan kode SQL dibawah
+```sql
+INSERT INTO `users` (`id`, `nama`, `email`, `password`, `no_hp`, `alamat`, `role`, `created_at`, `updated_at`) VALUES ('1', 'Admin', 'admin@mail.com', '12345', '0812322121', NULL, '1', NULL, NULL);
+```
+Setelah itu tekan tombol **GO**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Login
+| Email | Password     |
+| :-------- | :------- | 
+| admin@mail.com | 12345 | 
