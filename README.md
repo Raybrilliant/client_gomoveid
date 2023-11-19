@@ -51,7 +51,7 @@ masuk kedalam PHPMyAdmin dengan menekan tombol admin pada MySQL
 ![](https://skillforge.com/wp-content/uploads/2018/12/xamppadminbtn.png)
 
 ### Masuk ke menu SQL
-Masuk kedalam menu SQL seperti gambar berikut
+Pilih **gomoveid** Masuk kedalam menu SQL seperti gambar berikut
 
 *Fokus pada warna merah dan kuning*
 
