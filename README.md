@@ -63,7 +63,7 @@ Pilih **gomoveid** Masuk kedalam menu SQL seperti gambar berikut
 
 Lalu masukan kode SQL dibawah
 ```sql
-INSERT INTO `users` (`id`, `nama`, `email`, `password`, `no_hp`, `alamat`, `role`, `created_at`, `updated_at`) VALUES ('1', 'Admin', 'admin@mail.com', '12345', '0812322121', NULL, '1', NULL, NULL);
+INSERT INTO `users` (`id`, `nama`, `email`, `password`, `no_hp`, `alamat`, `role`, `created_at`, `updated_at`) VALUES (NULL, 'Admin', 'admin@mail.com', '12345', '0812322121', NULL, '1', NULL, NULL);
 ```
 Setelah itu tekan tombol **GO**
 
