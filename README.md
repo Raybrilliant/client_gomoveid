@@ -32,9 +32,12 @@ Jalankan XAMPP dengan menekan tombol seperti gambar dibawah
 ### Jalankan Migrate
 
 ```
-php artisan migrate:fresh
+php artisan migrate
 ```
-
+### Update Project
+```
+php artisan key:generate
+```
 ### Jalankan Project
 
 ```
