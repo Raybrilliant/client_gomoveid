@@ -36,8 +36,8 @@ Route::middleware('validasi')->group(function(){
 });
 
 // CRUD Route
+Route::post('create-user',[CrudController::class,'createUser']);
 Route::middleware('validasi')->group(function(){
-    Route::post('create-user',[CrudController::class,'createUser']);
     Route::post('pesan-layanan',[CrudController::class,'createPesanan']);
     Route::post('edit-pesanan',[CrudController::class,'updatePesanan']);
     Route::get('confirm/{id}',[CrudController::class,'updatePembayaran']);
